@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКоманда_Сохранить" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Команда_Сохранить</CommandName>
+				<ExtendedTooltip name="ФормаКоманда_СохранитьРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="23">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="24"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="НастройкиОбработки_РаботаСЭлементамиФорм" id="31">
+			<DataPath>НастройкиОбработки_РаботаСЭлементамиФорм</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_РаботаСЭлементамиФормКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="НастройкиОбработки_РаботаСЭлементамиФормРасширеннаяПодсказка" id="33">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Позволяет работать с элементами форм</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_СкрыватьКнопкиПодсказок" id="8">
+			<DataPath>НастройкиОбработки_СкрыватьКнопкиПодсказок</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_СкрыватьКнопкиПодсказокКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="НастройкиОбработки_СкрыватьКнопкиПодсказокРасширеннаяПодсказка" id="10">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>В основной форме скрываются кнопки расширенной подсказки у всех элементов</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_ПоказыватьМенеджерОкон" id="11">
+			<DataPath>НастройкиОбработки_ПоказыватьМенеджерОкон</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_ПоказыватьМенеджерОконКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НастройкиОбработки_ПоказыватьМенеджерОконРасширеннаяПодсказка" id="13">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Показывать ли форму самого менеджера открытых форм</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_СортироватьПоЗаголовкуФормы" id="14">
+			<DataPath>НастройкиОбработки_СортироватьПоЗаголовкуФормы</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_СортироватьПоЗаголовкуФормыКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="НастройкиОбработки_СортироватьПоЗаголовкуФормыРасширеннаяПодсказка" id="16">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сортировать ли список открытых форм по имени формы</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="РаботаСНастройкамиФорм" id="1">
+			<DataPath>НастройкиОбработки_РаботаСНастройкамиФорм</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>CheckBox</CheckBoxType>
+			<ContextMenu name="РаботаСНастройкамиФормКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="РаботаСНастройкамиФормРасширеннаяПодсказка" id="3">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавляется возможность работы с настройками форм в хранилище системных настроек</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_РаботаСКонсольюКода" id="20">
+			<DataPath>НастройкиОбработки_РаботаСКонсольюКода</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_РаботаСКонсольюКодаКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="НастройкиОбработки_РаботаСКонсольюКодаРасширеннаяПодсказка" id="22">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавляется возможность использовать консоль кода</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_ПоказыватьИсториюОткрытияФормы" id="28">
+			<DataPath>НастройкиОбработки_ПоказыватьИсториюОткрытияФормы</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_ПоказыватьИсториюОткрытияФормыКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="НастройкиОбработки_ПоказыватьИсториюОткрытияФормыРасширеннаяПодсказка" id="30">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Показывает историю открытия форм</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_РаботаСоСвойствамиФорм" id="34">
+			<DataPath>НастройкиОбработки_РаботаСоСвойствамиФорм</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_РаботаСоСвойствамиФормКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="НастройкиОбработки_РаботаСоСвойствамиФормРасширеннаяПодсказка" id="36">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Позволяет работать со свойствами форм</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_РаботаСПараметрамиФорм" id="37">
+			<DataPath>НастройкиОбработки_РаботаСПараметрамиФорм</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать параметры форм</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_РаботаСПараметрамиФормКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="НастройкиОбработки_РаботаСПараметрамиФормРасширеннаяПодсказка" id="39">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Показывает ключевые параметры формы</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<CheckBoxField name="НастройкиОбработки_РаботаСРеквизитамиФорм" id="17">
+			<DataPath>НастройкиОбработки_РаботаСРеквизитамиФорм</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НастройкиОбработки_РаботаСРеквизитамиФормКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="НастройкиОбработки_РаботаСРеквизитамиФормРасширеннаяПодсказка" id="19">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавляется возможность работы с реквизитами форм</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<InputField name="НастройкиОбработки_АвтоматическиПроверяемыеРеквизиты" id="25">
+			<DataPath>НастройкиОбработки_АвтоматическиПроверяемыеРеквизиты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="НастройкиОбработки_АвтоматическиПроверяемыеРеквизитыКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="НастройкиОбработки_АвтоматическиПроверяемыеРеквизитыРасширеннаяПодсказка" id="27">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Реквизиты, наличие которых проверять у каждой формы для возможности последующего интерактивного редактирования</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкиОбработки_РаботаСНастройкамиФорм" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с настройками форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_СкрыватьКнопкиПодсказок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрывать кнопки подсказок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_СкрыватьКнопкиПодсказок</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_ПоказыватьМенеджерОкон" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать форму менеджера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_СортироватьПоЗаголовкуФормы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать формы по заголовку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_РаботаСРеквизитамиФорм" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с реквизитами форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_РаботаСКонсольюКода" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с консолью кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_РаботаСКонсольюКода</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_АвтоматическиПроверяемыеРеквизиты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически проверяемые на наличие реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_ПоказыватьИсториюОткрытияФормы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать историю открытия формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_ПоказыватьИсториюОткрытияФормы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_РаботаСЭлементамиФорм" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с элементами форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_РаботаСЭлементамиФорм</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_РаботаСоСвойствамиФорм" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа со свойствами форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_РаботаСоСвойствамиФорм</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НастройкиОбработки_РаботаСПараметрамиФорм" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с параметрами форм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НастройкиОбработки_РаботаСПараметрамиФорм</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Команда_Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Команда_Сохранить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РаботаСНастройкамиФорм">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
