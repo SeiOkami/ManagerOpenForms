@@ -112,13 +112,15 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <templates uuid="507d24b4-05f2-4bf9-a8d0-6864fd1d66a0">
-    <name>ИсторияИзменений</name>
+  <forms uuid="33284f25-ff06-427d-9d0b-def5dbc3fa7f">
+    <name>ОбщегоНазначения</name>
     <synonym>
       <key>ru</key>
-      <value>История изменений</value>
+      <value>Общего назначения</value>
     </synonym>
-  </templates>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="148e49a0-2df9-4c7e-81b1-3936669bff93">
     <name>СистемныеФормы</name>
     <synonym>
