@@ -76,15 +76,6 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <forms uuid="cf9463e1-d148-4d93-9522-9de7cbe0894e">
-    <name>ФормаКомпоновщикаОтчета</name>
-    <synonym>
-      <key>ru</key>
-      <value>Форма компоновщика отчета</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
   <forms uuid="ffa874a7-6c82-495d-b67e-6d629fa0f047">
     <name>ФормаНастроекКомпоновки</name>
     <synonym>

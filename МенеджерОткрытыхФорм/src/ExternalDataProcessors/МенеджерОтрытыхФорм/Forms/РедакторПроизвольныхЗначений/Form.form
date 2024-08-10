@@ -212,6 +212,10 @@
     <name>ОбщиеПараметры</name>
     <valueType/>
   </parameters>
+  <parameters>
+    <name>ПроизвольныеЗначения</name>
+    <valueType/>
+  </parameters>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>
