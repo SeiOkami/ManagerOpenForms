@@ -710,10 +710,6 @@
               <event>Selection</event>
               <name>ОткрытыеФормыВыбор</name>
             </handlers>
-            <handlers>
-              <event>BeforeAddRow</event>
-              <name>ОткрытыеФормыПередНачаломДобавления</name>
-            </handlers>
             <searchStringAddition>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -3018,10 +3014,6 @@
                 <headerHorizontalAlign>Left</headerHorizontalAlign>
                 <showInFooter>true</showInFooter>
                 <extInfo xsi:type="form:InputFieldExtInfo">
-                  <handlers>
-                    <event>StartChoice</event>
-                    <name>ОткрытыеФормыРеквизитыЗначениеНачалоВыбора</name>
-                  </handlers>
                   <autoMaxWidth>true</autoMaxWidth>
                   <autoMaxHeight>true</autoMaxHeight>
                   <wrap>true</wrap>
@@ -3739,10 +3731,6 @@
                 </userVisible>
                 <horizontalAlign>Left</horizontalAlign>
               </autoCommandBar>
-              <handlers>
-                <event>Selection</event>
-                <name>ОткрытыеФормыПараметрыВыбор</name>
-              </handlers>
               <handlers>
                 <event>OnActivateRow</event>
                 <name>ОткрытыеФормыПараметрыПриАктивизацииСтроки</name>
@@ -5929,10 +5917,6 @@
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
-  <handlers>
-    <event>OnSaveDataInSettingsAtServer</event>
-    <name>ПриСохраненииДанныхВНастройкахНаСервере</name>
-  </handlers>
   <handlers>
     <event>ChoiceProcessing</event>
     <name>ОбработкаВыбора</name>

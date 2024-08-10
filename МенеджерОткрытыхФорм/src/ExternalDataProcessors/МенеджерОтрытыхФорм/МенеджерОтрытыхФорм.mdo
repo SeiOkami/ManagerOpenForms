@@ -76,15 +76,6 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <forms uuid="cf9463e1-d148-4d93-9522-9de7cbe0894e">
-    <name>ФормаКомпоновщикаОтчета</name>
-    <synonym>
-      <key>ru</key>
-      <value>Форма компоновщика отчета</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
   <forms uuid="ffa874a7-6c82-495d-b67e-6d629fa0f047">
     <name>ФормаНастроекКомпоновки</name>
     <synonym>
@@ -112,13 +103,15 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <templates uuid="507d24b4-05f2-4bf9-a8d0-6864fd1d66a0">
-    <name>ИсторияИзменений</name>
+  <forms uuid="33284f25-ff06-427d-9d0b-def5dbc3fa7f">
+    <name>ОбщегоНазначения</name>
     <synonym>
       <key>ru</key>
-      <value>История изменений</value>
+      <value>Общего назначения</value>
     </synonym>
-  </templates>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <templates uuid="148e49a0-2df9-4c7e-81b1-3936669bff93">
     <name>СистемныеФормы</name>
     <synonym>
