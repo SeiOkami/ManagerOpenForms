@@ -296,23 +296,26 @@
 //  СистемныеФормы - см. НовыйСистемныеФормы
 Процедура ЗаполнитьСистемныеФормы(СистемныеФормы)
 	
-	МакетСистемныеФормы = ПолучитьМакет("СистемныеФормы"); // ТабличныйДокумент
+	МакетСистемныеФормы = МакетСистемныхФорм();
 	
-	Для ТекущаяСтрока = 2 По МакетСистемныеФормы.ВысотаТаблицы Цикл
+	Для НомерСтроки = 1 По СтрЧислоСтрок(МакетСистемныеФормы) Цикл
+		
+		ТекущаяСтрока = СтрПолучитьСтроку(МакетСистемныеФормы, НомерСтроки);
+		
+		ЧастиСтроки = СтрРазделить(ТекущаяСтрока, ":");
+		
+		ИмяФормы = СокрЛП(ЧастиСтроки[0]);
+		ЧастиСтроки.Удалить(0);
+		
+		Если ЗначениеЗаполнено(ЧастиСтроки) Тогда
+			Заголовок = СтрШаблон("%1 (%2)", ИмяФормы, СокрЛП(ЧастиСтроки[0]));
+		Иначе
+			Заголовок = ИмяФормы;
+		КонецЕсли;
 		
 		ОписаниеФормы = НовыйСистемнаяФорма();
-		ОписаниеФормы.Имя = ЗначениеЯчейки(МакетСистемныеФормы, ТекущаяСтрока, 1);
-		ОписаниеФормы.Заголовок = ЗначениеЯчейки(МакетСистемныеФормы, ТекущаяСтрока, 2);
-		
-		Если ПустаяСтрока(ОписаниеФормы.Имя) Тогда
-			Прервать;
-		КонецЕсли;
-		
-		Если ПустаяСтрока(ОписаниеФормы.Заголовок) Тогда
-			ОписаниеФормы.Заголовок = ОписаниеФормы.Имя;
-		Иначе
-			ОписаниеФормы.Заголовок = СтрШаблон("%1 (%2)", ОписаниеФормы.Имя, ОписаниеФормы.Заголовок);
-		КонецЕсли;
+		ОписаниеФормы.Имя = ИмяФормы;
+		ОписаниеФормы.Заголовок = Заголовок;
 		
 		СистемныеФормы.Добавить(ОписаниеФормы);
 		
@@ -320,19 +323,128 @@
 	
 КонецПроцедуры
 
-// Значение ячейки.
-// 
-// Параметры:
-//  ТабличныйДокумент - ТабличныйДокумент
-//  НомерСтроки - Число
-//  НомерКолонки - Число
-// 
-// Возвращаемое значение:
-//  Строка
-Функция ЗначениеЯчейки(ТабличныйДокумент, НомерСтроки, НомерКолонки)
+Функция МакетСистемныхФорм()
 	
-	Адрес = СтрШаблон("R%1C%2", Формат(НомерСтроки, "ЧГ="), Формат(НомерКолонки,"ЧГ="));
-	Возврат СокрЛП(ТабличныйДокумент.Область(Адрес).Текст);
+	Возврат 
+	"About"	
+	"AllFunctionsForm:Все функции"
+	"allmessages:Все сообщения"
+	"BorderChoose:Выбор линии"
+	"CertificateInfo"	
+	"ChartAxis:Ось диаграммы"
+	"ChartLabelArea:Настройка области подписи"
+	"ChartPaletteDescription:Описание палитры цветов"
+	"ChartRefBands:Информационные интервалы диаграммы"
+	"ChartRefLines:Информационные линии диаграммы"
+	"ChartScale"
+	"ChartTypeChoose:Выбор типа диаграммы"
+	"CMICustomization"
+	"ColorChoose"
+	"CryptoCertManager"
+	"DataExchangeCreateInitialImage"
+	"DataExchangeReadChanges:Чтение сообщения с изменениями"
+	"DataExchangeWriteChanges"
+	"DataHistoryChangeHistoryEnForm"
+	"DataHistoryChangeHistoryRuForm"
+	"DataHistoryUsersChooseDialog"
+	"DataHistoryVersionDataEnForm"
+	"DataHistoryVersionDataRuForm"
+	"DataHistoryVersions"
+	"DataHistoryVersionsFilterDialog"
+	"DCSChartRefBand:Информационный интервал диаграммы"
+	"DCSChartRefLine:Информационная линия диаграммы"
+	"DesktopCustomization:Настройка начальной страницы"
+	"diagGanttSets:Настройка"
+	"ECSContextConvLargeMA"
+	"ECSContextConvLargeMAv13"
+	"ECSContextConvSmallMA"
+	"ECSContextConvSmallMAv13"
+	"ECSConvAddMA:Новое обсуждение"
+	"ECSConvAddMAv13"
+	"ECSConvMembersMA"
+	"ECSConvMembersMAv13"
+	"ECSConvTitleMA"
+	"ECSFullUserInfoDlgMA"
+	"ECSFullUserInfoDlgMAv13"
+	"ECSInviteExtUser:Приглашение внешнего участника"
+	"ECSMainForm:Обсуждения"
+	"ECSMainFormMA:Обсуждения"
+	"ECSMainFormMA2:Обсуждения"
+	"ECSMainFormMA2v13"
+	"ECSMainFormMAv13"
+	"ECSRelatedMessagesForm:История сообщений"
+	"ECSSettings:Настройки"
+	"ECSSettingsMA:Настройки"
+	"ECSUserInfoMA"
+	"FavoritesDlg"
+	"FavoritesDlgNew:Избранное"
+	"fdSave:Сохранить"
+	"FileNew:Выбор вида документа"
+	"FontChoose:Выбор шрифта"
+	"FontChooseDlgMobile"
+	"formCustomization"
+	"formCustomizationAddFields:Выберите поля для размещения в форме"
+	"FormDataSettingsStorageLoadForm:Выбор параметров формы"
+	"FormDataSettingsStorageSaveForm:Сохранение параметров"
+	"fullscreen:Fullscreen"
+	"GanttChartChoiceValue:Выбор"
+	"Help:Справка"
+	"HelpDlg:Выбор Главы"
+	"HelpM:Справка"
+	"HistoryDlg:История"
+	"HistoryDlgNew:История"
+	"ImageSize:Изменение размера картинки"
+	"InsertHyperLink:Вставка гиперссылки"
+	"InterStringInt:Междустрочный интервал"
+	"itscredentials:Лицензирование конфигураций"
+	"LineChoose:Выбор линии"
+	"LockUserWorkForm:Система заблокирована (введите пароль)"
+	"MessageBox"
+	"moxelaccurateprint:Печатная форма подготовлена в формате PDF"
+	"moxelColumnWidth"
+	"moxelDeleteCell:Переместить ячейки"
+	"moxelDupName:Конфликт имен"
+	"moxelFind:Поиск"
+	"moxelGoToCell"
+	"MoxelHeadersAndFooters"
+	"moxelInsert"
+	"moxelLWSEdit"
+	"moxelName:Имя"
+	"moxelNames:Имена"
+	"moxelProperties"
+	"moxelReplace"
+	"moxelRowHeight"
+	"moxelSave:Сохранить"
+	"moxelSectionName"
+	"moxelSectType:Новая группа"
+	"moxelSplitCell:Разбить ячейки"
+	"NotificationsDlgNew:Оповещения"
+	"ObjectBlocking"
+	"ObjectBlockingMessage:Отправить сообщение"
+	"ObjectChangedOrDeleted:Данные были изменены"
+	"OpenValueDlg"
+	"PageSettings"
+	"PerfSettings:Настройка показателей производительности"
+	"PerfStats:Вызовы сервера - история накопленных"
+	"PeriodList:Выберите период"
+	"pictureChoose:Выбор картинки"
+	"pictureView"
+	"planneritemedit"
+	"planneritemschedule:Редактирование расписания"
+	"PostingMode:Выбор режима проведения"
+	"ReportSettingsStorageLoadForm:Выбор настроек отчета"
+	"ReportSettingsStorageSaveForm:Сохранение настроек отчета"
+	"ReportVariantsStorageLoadForm:Выбор варианта отчета"
+	"ReportVariantsStorageSaveForm:Сохранение варианта отчета"
+	"SearchForm:Поиск"
+	"SelectFileDlg"
+	"SelectSymbol:Выбор символа"
+	"TaskExecution:Выполнение заданий"
+	"UniversalListOutput:Вывести список"
+	"UniversalListSettingsStorageLoadForm:Выбор настроек динамического списка"
+	"UniversalListSettingsStorageSaveForm:Сохранение настроек динамического списка"
+	"WindowsDlg:Все окна";
+
 	
 КонецФункции
 
