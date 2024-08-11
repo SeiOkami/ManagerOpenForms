@@ -112,11 +112,4 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <templates uuid="148e49a0-2df9-4c7e-81b1-3936669bff93">
-    <name>СистемныеФормы</name>
-    <synonym>
-      <key>ru</key>
-      <value>Системные формы</value>
-    </synonym>
-  </templates>
 </mdclass:ExternalDataProcessor>
